@@ -1,3 +1,3 @@
-add_lunch_combo full_mint-eng
-add_lunch_combo omni_mint-eng
-add_lunch_combo omni_mint-userdebug
+add_lunch_combo full_tsubasa-eng
+add_lunch_combo omni_tsubasa-eng
+add_lunch_combo omni_tsubasa-userdebug

@@ -1,3 +1,4 @@
+
 #!/bin/sh
 # hw_config.sh.
 # Used to set special parameters.
@@ -9,7 +10,9 @@ if [ $? -ne 0 ] ; then
         flags="-r -f"
 fi
 
-fw=touch_module_id_0x32.img
+module_id=$(/system/bin/ta_param_loader -t 60221 -f "%02x")
+
+fw=touch_module_id_0x${module_id}.img
 
 rmi4_fwloader -b /system/etc/firmware/$fw -d /sys/bus/rmi4/devices/sensor00 $flags
 
@@ -27,11 +30,22 @@ echo 400 > $dev/btn_trig_level
 
 # Proximity sensor configuration
 dev=/sys/bus/i2c/devices/i2c-12/12-0054/
-val_cycle=0
-val_nburst=1
-val_freq=0
-val_threshold=2
-val_filter=0
+val_cycle=1
+val_nburst=8
+val_freq=2
+val_threshold=4
+val_filter=1
+
+ta_param_loader 60240 prox_cal
+val_calibrated=$?
+case $val_calibrated in
+ 1)
+  ta_param_loader 60240 threshold
+  val_threshold=$?
+  ta_param_loader 60240 rfilter
+  val_filter=$?
+  ;;
+esac
 
 echo $val_cycle > $dev/cycle    # Duration Cycle. Valid range is 0 - 3.
 echo $val_nburst > $dev/nburst  # Number of pulses in burst. Valid range is 0 - 15.

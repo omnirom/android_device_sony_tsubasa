@@ -1,2 +1,2 @@
-android_device_sony_mint
+android_device_sony_tsubasa
 ========================

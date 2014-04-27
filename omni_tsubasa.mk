@@ -30,24 +30,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/sony/mint/device.mk)
+$(call inherit-product, device/sony/tsubasa/device.mk)
 
-PRODUCT_NAME := omni_mint
-PRODUCT_DEVICE := mint
+PRODUCT_NAME := omni_tsubasa
+PRODUCT_DEVICE := tsubasa
 PRODUCT_BRAND := sony
-PRODUCT_MODEL := Xperia T
+PRODUCT_MODEL := Xperia V
 PRODUCT_MANUFACTURER := Sony
 
 # Kernel inline build
-TARGET_KERNEL_CONFIG := cm_blue_mint_defconfig
-TARGET_VARIANT_CONFIG := cm_blue_mint_defconfig
-TARGET_SELINUX_CONFIG := cm_blue_mint_defconfig
+TARGET_KERNEL_CONFIG := cm_blue_tsubasa_defconfig
+TARGET_VARIANT_CONFIG := cm_blue_tsubasa_defconfig
+TARGET_SELINUX_CONFIG := cm_blue_tsubasa_defconfig
 
 # Fingerprint
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=LT30p \
-    BUILD_FINGERPRINT=Sony/LT30p/LT30p:4.3/9.2.A.0.295/2P7_tg:user/release-keys \
-    PRIVATE_BUILD_DESC="LT30p-user 4.3 JB-MR2-BLUE-CAF-140119-1326 51 test-keys"
 
 # Common Sony Resources
 $(call inherit-product, device/sony/common/resources.mk)

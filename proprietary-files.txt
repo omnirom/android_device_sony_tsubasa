@@ -8,6 +8,7 @@ lib/libadsprpc.so
 #
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libaudioalsa.so
 
 #
 # Bluetooth
@@ -23,6 +24,7 @@ lib/hw/camera.qcom.so:lib/hw/vendor-camera.qcom.so
 lib/libcamera_clientsemc.so
 lib/libcameralight.so
 lib/libmmcamera_3a_legacy.so
+lib/libmm-color-convertor.so
 lib/libmmcamera_faceproc.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_hdr_lib.so
@@ -53,14 +55,14 @@ lib/libmmstillomx.so
 #
 # Camera Firmwire
 #
-vendor/camera/APT01BM0.dat
+vendor/camera/APT00YP1.dat
 vendor/camera/KMO13BS0.dat
 vendor/camera/KMO13BS0_BU6456.dat
 vendor/camera/KMO13BS0_IMX091.dat
 vendor/camera/SOI13BS0.dat
 vendor/camera/SOI13BS0_BU6456.dat
 vendor/camera/SOI13BS0_IMX091.dat
-vendor/camera/STW01BM0.dat
+vendor/camera/STW00YP1.dat
 vendor/camera/flash.dat
 vendor/camera/product.dat
 
@@ -81,10 +83,29 @@ bin/mpdecision
 lib/libqc-opt.so
 lib/libthermalclient.so
 
+bin/netmgrd
+bin/qmuxd
+bin/qseecomd
+bin/rmi4_fwloader
+bin/rmt_storage
+bin/secchand
+bin/ta_param_loader
+bin/ta_qmi_service
+bin/taimport
+bin/thermald
+bin/updatemiscta
+bin/usbhub
+bin/usbhub_init
+etc/fast-dormancy/fd_custm_conf.txt
+etc/fast-dormancy/fd_ext_conf.txt
+etc/fast-dormancy/fd_int_conf.txt
 
 #
 # DSP Firmwire
 #
+#etc/firmware/dsp1.mbn
+#etc/firmware/dsp2.mbn
+#etc/firmware/dsp3.mbn
 etc/firmware/dsps.b00
 etc/firmware/dsps.b01
 etc/firmware/dsps.b02
@@ -100,6 +121,28 @@ bin/fmconfig
 bin/fm_qsoc_patches
 lib/libfmradio.so
 lib/libfmradio.sony-iris.so
+
+#
+# GPU
+#
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libGLESv2S3D_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libC2D2.so
+vendor/lib/libc2d2_a3xx.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-a3xx.so
+vendor/lib/libsc-a2xx.so
+vendor/lib/libsc-a3xx.so
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
 
 #
 # HDCP
@@ -180,68 +223,34 @@ etc/firmware/modem.b01
 etc/firmware/modem.b02
 etc/firmware/modem.b03
 etc/firmware/modem.b04
+etc/firmware/modem.b05
 etc/firmware/modem.b06
 etc/firmware/modem.b07
+etc/firmware/modem.b08
+etc/firmware/modem.b09
+etc/firmware/modem.b10
 etc/firmware/modem.mdt
-etc/firmware/modem_f1.b00
-etc/firmware/modem_f1.b01
-etc/firmware/modem_f1.b02
-etc/firmware/modem_f1.b03
-etc/firmware/modem_f1.b04
-etc/firmware/modem_f1.b05
-etc/firmware/modem_f1.b06
-etc/firmware/modem_f1.b07
-etc/firmware/modem_f1.b08
-etc/firmware/modem_f1.b09
-etc/firmware/modem_f1.b10
-etc/firmware/modem_f1.b13
-etc/firmware/modem_f1.b14
-etc/firmware/modem_f1.b21
-etc/firmware/modem_f1.b22
-etc/firmware/modem_f1.b23
-etc/firmware/modem_f1.b25
-etc/firmware/modem_f1.b26
-etc/firmware/modem_f1.b29
-etc/firmware/modem_f1.mdt
-etc/firmware/modem_f2.b00:etc/firmware/modem_fw.b00
-etc/firmware/modem_f2.b01:etc/firmware/modem_fw.b01
-etc/firmware/modem_f2.b02:etc/firmware/modem_fw.b02
-etc/firmware/modem_f2.b03:etc/firmware/modem_fw.b03
-etc/firmware/modem_f2.b04:etc/firmware/modem_fw.b04
-etc/firmware/modem_f2.b05:etc/firmware/modem_fw.b05
-etc/firmware/modem_f2.b06:etc/firmware/modem_fw.b06
-etc/firmware/modem_f2.b07:etc/firmware/modem_fw.b07
-etc/firmware/modem_f2.b08:etc/firmware/modem_fw.b08
-etc/firmware/modem_f2.b09:etc/firmware/modem_fw.b09
-etc/firmware/modem_f2.b10:etc/firmware/modem_fw.b10
-etc/firmware/modem_f2.b13:etc/firmware/modem_fw.b13
-etc/firmware/modem_f2.b14:etc/firmware/modem_fw.b14
-etc/firmware/modem_f2.b21:etc/firmware/modem_fw.b21
-etc/firmware/modem_f2.b22:etc/firmware/modem_fw.b22
-etc/firmware/modem_f2.b23:etc/firmware/modem_fw.b23
-etc/firmware/modem_f2.b25:etc/firmware/modem_fw.b25
-etc/firmware/modem_f2.b26:etc/firmware/modem_fw.b26
-etc/firmware/modem_f2.b29:etc/firmware/modem_fw.b29
-etc/firmware/modem_f2.mdt:etc/firmware/modem_fw.mdt
-
-#
-# NFC
-#
-lib/hw/nfc.msm8960.so
-
-#
-# Post Processing
-#
-bin/mm-pp-daemon
-
-#
-# Protocol Buffers
-#
-lib/libprotobuf-c.so
-
-#
-# Q6 Firmware
-#
+etc/firmware/modem_fw.b00
+etc/firmware/modem_fw.b01
+etc/firmware/modem_fw.b02
+etc/firmware/modem_fw.b03
+etc/firmware/modem_fw.b04
+etc/firmware/modem_fw.b05
+etc/firmware/modem_fw.b06
+etc/firmware/modem_fw.b07
+etc/firmware/modem_fw.b08
+etc/firmware/modem_fw.b09
+etc/firmware/modem_fw.b10
+etc/firmware/modem_fw.b11
+etc/firmware/modem_fw.b13
+etc/firmware/modem_fw.b14
+etc/firmware/modem_fw.b21
+etc/firmware/modem_fw.b22
+etc/firmware/modem_fw.b23
+etc/firmware/modem_fw.b25
+etc/firmware/modem_fw.b26
+etc/firmware/modem_fw.b29
+etc/firmware/modem_fw.mdt
 etc/firmware/q6.b00
 etc/firmware/q6.b01
 etc/firmware/q6.b03
@@ -249,6 +258,11 @@ etc/firmware/q6.b04
 etc/firmware/q6.b05
 etc/firmware/q6.b06
 etc/firmware/q6.mdt
+
+#
+#NFC
+#
+lib/hw/nfc.msm8960.so
 
 #
 # QMI
@@ -309,6 +323,42 @@ lib/libMPU3050.so
 lib/libsensors_akm8972.so
 
 #
+# Sysmonitor
+#
+bin/system_monitor
+lib/libsysmon.so
+lib/libsysmon_idd.so
+lib/libsysmon_jni.so
+lib/sysmon/sysmon_batt_therm.so
+lib/sysmon/sysmon_camif.so
+lib/sysmon/sysmon_charge_current_limit_level.so
+lib/sysmon/sysmon_corelimit.so
+lib/sysmon/sysmon_disable_charging1.so
+lib/sysmon/sysmon_disable_charging2.so
+lib/sysmon/sysmon_enable_charging.so
+lib/sysmon/sysmon_gpu_perflevel.so
+lib/sysmon/sysmon_lcd_brightness_level.so
+lib/sysmon/sysmon_modem_level0.so
+lib/sysmon/sysmon_modem_level1.so
+lib/sysmon/sysmon_modem_level2.so
+lib/sysmon/sysmon_modem_level3.so
+lib/sysmon/sysmon_msm_thermal_disable.so
+lib/sysmon/sysmon_pa_therm0.so
+lib/sysmon/sysmon_pa_therm1.so
+lib/sysmon/sysmon_perflevel.so
+lib/sysmon/sysmon_pm8921_tz.so
+lib/sysmon/sysmon_test_sensor.so
+lib/sysmon/sysmon_torch_limit.so
+lib/sysmon/sysmon_tsens_tz_sensor0.so
+lib/sysmon/sysmon_tsens_tz_sensor1.so
+lib/sysmon/sysmon_tsens_tz_sensor2.so
+lib/sysmon/sysmon_tsens_tz_sensor3.so
+lib/sysmon/sysmon_tsens_tz_sensor4.so
+lib/sysmon/sysmon_usb_current_limit_level.so
+lib/sysmon/sysmon_wlan_limit.so
+lib/sysmon/sysmon_xo_therm.so
+
+#
 # TA
 #
 bin/ta_param_loader
@@ -328,7 +378,9 @@ lib/libtime_genoff.so
 #
 # Touchscreen
 #
-etc/firmware/touch_module_id_0x32.img
+etc/firmware/touch_module_id_0x30.img
+etc/firmware/touch_module_id_0x31.img
+etc/firmware/touch_module_id_0x40.img
 
 #
 # USB
@@ -348,6 +400,11 @@ etc/firmware/vidc_1080p.fw
 etc/firmware/vidcfw.elf
 
 #
+# Wifi
+#
+bin/wcnss_service
+
+#
 # WiFi Firmware
 #
 etc/firmware/wcnss.b00
@@ -356,6 +413,8 @@ etc/firmware/wcnss.b02
 etc/firmware/wcnss.b04
 etc/firmware/wcnss.b05
 etc/firmware/wcnss.mdt
+#etc/firmware/wlan/prima/WCNSS_cfg.dat
+#etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Misc - possibly to remove
 bin/cal_data_manager
@@ -367,14 +426,32 @@ bin/thermald
 etc/fast-dormancy/fd_custm_conf.txt
 etc/fast-dormancy/fd_ext_conf.txt
 etc/fast-dormancy/fd_int_conf.txt
-lib/libaudioalsa.so
 lib/libcnefeatureconfig.so
 lib/libcneqmiutils.so
 lib/libcneutils.so
 lib/libmllite.so
 lib/libmlplatform.so
-lib/libmm-color-convertor.so
 lib/libmpl.so
+#lib/libnetcmdiface.so
 lib/libnl.so
-lib/libsysmon_idd.so
+lib/libprotobuf-c.so
 lib/libxml.so
+
+#etc/firmware/acdb.mbn
+#etc/firmware/mdm_acdb.img
+
+#etc/firmware/apps.mbn
+
+etc/firmware/cyttsp_8064_mtp.hex
+etc/firmware/cyttsp_8960_cdp.hex
+
+#etc/firmware/efs1.mbn
+#etc/firmware/efs2.mbn
+#etc/firmware/efs3.mbn
+
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+
+
+
+
