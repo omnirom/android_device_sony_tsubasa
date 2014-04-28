@@ -3,7 +3,7 @@ include device/sony/blue-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/tsubasa/include
 
-TARGET_KERNEL_CONFIG := blue_tsubasa_defconfig
+TARGET_KERNEL_CONFIG := cm_blue_tsubasa_defconfig
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 18

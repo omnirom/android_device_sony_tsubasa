@@ -39,7 +39,7 @@ PRODUCT_MODEL := Xperia V
 PRODUCT_MANUFACTURER := Sony
 
 # Kernel inline build
-TARGET_KERNEL_CONFIG := cm_blue_tsubasa_defconfig
+TARGET_KERNEL_CONFIG :=  cm_blue_tsubasa_defconfig
 TARGET_VARIANT_CONFIG := cm_blue_tsubasa_defconfig
 TARGET_SELINUX_CONFIG := cm_blue_tsubasa_defconfig
 
