@@ -1,0 +1,75 @@
+[
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_kernel_sony_msm8960",
+        "target_path": "kernel/sony/msm8960",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_device_sony_blue-common",
+        "target_path": "device/sony/blue-common",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_device_sony_common",
+        "target_path": "device/sony/common",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_device_sony_qcom-common",
+        "target_path": "device/sony/qcom-common",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_device_qcom_common",
+        "target_path": "device/qcom/common",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_hardware_sony_DASH",
+        "target_path": "hardware/sony/DASH",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_hardware_qcom_bt",
+        "target_path": "hardware/qcom/bt",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_hardware_qcom_audio-caf",
+        "target_path": "hardware/qcom/audio-caf",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_hardware_qcom_display-caf",
+        "target_path": "hardware/qcom/display-caf",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_hardware_qcom_media-caf",
+        "target_path": "hardware/qcom/media-caf",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "OmniRom/android_hardware_qcom_wlan",
+        "target_path": "hardware/qcom/wlan",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "DonkeyCoyote/proprietary_vendor_sony",
+        "target_path": "vendor/sony",
+        "revision": "android-4.4"
+    }
+]
+
